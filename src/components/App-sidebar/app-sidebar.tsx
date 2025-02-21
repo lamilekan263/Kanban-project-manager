@@ -22,6 +22,7 @@ import Logo from "../../../public/Logo.svg"
 import Image from "next/image"
 import { Button } from "../ui/button"
 import Link from "next/link"
+import LogoComponent from "../Logo"
 
 // Menu items.
 const items = [
@@ -50,10 +51,7 @@ export function AppSidebar() {
     return (
         <Sidebar>
             <SidebarHeader>
-                <div className="flex gap-2 p-6">
-                    <Image src={Logo} alt="Logo Image of kanban" />
-                    <Typography variant="xl">Kanban</Typography>
-                </div>
+                <LogoComponent/>
             </SidebarHeader>
             <SidebarContent>
                 <SidebarGroup>

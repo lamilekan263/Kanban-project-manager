@@ -9,7 +9,7 @@ const ToggleSideBarOpen = () => {
         setOpen,
     } = useSidebar()
     return (
-        <div className='absolute bottom-10 bg-primary p-4 rounded-r-full cursor-pointer' onClick={() => setOpen(true)}>
+        <div className='hidden md:block absolute bottom-10 bg-primary p-4 rounded-r-full cursor-pointer' onClick={() => setOpen(true)}>
             <Eye stroke='white' />
         </div>
     )
