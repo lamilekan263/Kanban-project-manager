@@ -7,7 +7,7 @@ import Logo from '../../public/Logo.svg'
 
 const Header = () => {
     return (
-        <nav className=' flex items-center  h-24 w-full bg-dashboard-background'>
+        <nav className=' flex items-center  h-24 md:h-20 w-full bg-dashboard-background'>
             <div className=' p-6 flex justify-between items-center flex-1'>
                 <div className='flex gap-2'>
                     <Image src={Logo} alt="Logo Image of kanban" className='block md:hidden' />

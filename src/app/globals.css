@@ -17,6 +17,7 @@ body {
     --primary: 242 48% 58%; /* #635FC7 */
     --primary-foreground: 0 0% 100%; /* White */
 
+    --primary-light:220 69% 97%;
     --dashboard-background: 0 0% 100%;
 
     --secondary: 210 40% 96.1%;
@@ -47,14 +48,7 @@ body {
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
     /* custom color */
-    --neutral-900: 237 100% 4%; /* #000112 */
-    --neutral-800: 235 16% 15%; /* #20212C */
-    --neutral-700: 235 12% 19%; /* #2B2C37 */
-    --neutral-600: 236 11% 27%; /* #3E3F4E */
-    --neutral-500: 216 15% 57%; /* #828FA3 */
-    --neutral-400: 221 69% 94%; /* #E4EBFA */
-    --neutral-300: 220 69% 97%; /* #F4F7FD */
-    --neutral-200: 0 0% 100%; /* #FFFFFF */ 
+ 
 
     --icon-color: #000; 
  }
@@ -65,8 +59,9 @@ body {
     --card-foreground: 210 40% 98%;
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
-    --primary-light: 243 100% 82%; /* #A8A4FF */
+    --primary-light: 237, 100%, 4% ;/* #A8A4FF */
     --primary-light-foreground: 0 0% 0%; /* Black */
+    
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
     --muted: 217.2 32.6% 17.5%;
@@ -93,8 +88,8 @@ body {
     --sidebar-ring: 217.2 91.2% 59.8%;
     
 
-    --dashboard-background: 235, 16%, 15%
-    --icon-color: #fff;
+    --dashboard-background: 235, 16%, 15%;
+    --icon-color: #E4EBFA;
   }
 }
 
@@ -110,3 +105,5 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+

@@ -23,9 +23,9 @@ export function ToggleSidebarTheme() {
     };
 
     return (
-        <div className="flex items-center justify-between space-x-3 mb-10 mx-6 p-2 h-12 bg-neutral-300">
+        <div className="flex items-center justify-between space-x-3   p-2 h-12 bg-primary-light">
             <SunIcon stroke="var(--icon-color)" />
-            <Switch className="w-10 h-5" id="airplane-mode" onCheckedChange={handleTheme} />
+            <Switch  className="w-10 h-5 text-primary" id="airplane-mode" onCheckedChange={handleTheme} />
             <span className="sr-only">Toggle theme</span>
             <MoonStar stroke="var(--icon-color)" />
         </div>

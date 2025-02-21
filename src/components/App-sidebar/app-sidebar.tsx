@@ -1,5 +1,5 @@
 'use client'
-import { Home, Inbox, PlusIcon } from "lucide-react"
+import { EyeOff, Home, Inbox, PlusIcon } from "lucide-react"
 import { usePathname } from "next/navigation"
 
 import {
@@ -41,13 +41,8 @@ export function AppSidebar() {
     const pathname = usePathname()
 
     const {
-        state,
-        open,
         setOpen,
-        openMobile,
         setOpenMobile,
-        isMobile,
-        toggleSidebar,
     } = useSidebar()
 
     setOpenMobile(false)
@@ -87,13 +82,19 @@ export function AppSidebar() {
                         </SidebarMenu>
                         <Button variant="ghost" className="w-full rounded-l-none rounded-r-full mt-2">
                             <PlusIcon />
-                            <Typography variant="s">CREATE NEW BOARD</Typography>
+                            <Typography variant="s" className="text-primary">CREATE NEW BOARD</Typography>
                         </Button>
                     </SidebarGroupContent>
                 </SidebarGroup>
             </SidebarContent>
-            <SidebarFooter>
+            <SidebarFooter className="mb-10">
                 <ToggleSidebarTheme />
+                <Button variant='ghost' onClick={() => setOpen(false)}>
+                    <EyeOff />
+                    <Typography variant="s">
+                        Hide the Sidebar
+                    </Typography>
+                </Button>
             </SidebarFooter>
         </Sidebar>
     )
