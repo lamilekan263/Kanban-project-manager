@@ -12,6 +12,7 @@ export default {
 			colors: {
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
+				icon: 'hsl(var(--icon-color))',
 				card: {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
@@ -24,15 +25,18 @@ export default {
 					DEFAULT: 'hsl(var(--primary))',
 					foreground: 'hsl(var(--primary-foreground))'
 				},
+				dashboard: {
+					background: 'hsl(var(--dashboard-background))',
+				},
 				neutral: {
-					900: "hsl(var(--neutral-900))",
-					800: "hsl(var(--neutral-800))",
-					700: "hsl(var(--neutral-700))",
-					600: "hsl(var(--neutral-600))",
-					500: "hsl(var(--neutral-500))",
-					400: "hsl(var(--neutral-400))",
-					300: "hsl(var(--neutral-300))",
-					200: "hsl(var(--neutral-200))",
+					'200': 'hsl(var(--neutral-200))',
+					'300': 'hsl(var(--neutral-300))',
+					'400': 'hsl(var(--neutral-400))',
+					'500': 'hsl(var(--neutral-500))',
+					'600': 'hsl(var(--neutral-600))',
+					'700': 'hsl(var(--neutral-700))',
+					'800': 'hsl(var(--neutral-800))',
+					'900': 'hsl(var(--neutral-900))'
 				},
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
@@ -59,6 +63,16 @@ export default {
 					'3': 'hsl(var(--chart-3))',
 					'4': 'hsl(var(--chart-4))',
 					'5': 'hsl(var(--chart-5))'
+				},
+				sidebar: {
+					DEFAULT: 'hsl(var(--sidebar-background))',
+					foreground: 'hsl(var(--sidebar-foreground))',
+					primary: 'hsl(var(--sidebar-primary))',
+					'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
+					accent: 'hsl(var(--sidebar-accent))',
+					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
+					border: 'hsl(var(--sidebar-border))',
+					ring: 'hsl(var(--sidebar-ring))'
 				}
 			},
 			borderRadius: {
