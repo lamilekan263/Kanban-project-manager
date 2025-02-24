@@ -15,7 +15,7 @@ const Input = React.forwardRef<HTMLInputElement, IInput>(
         <input
           type={type}
           ref={ref}
-          className="w-full bg-background p-2 pr-10 outline-none focus:ring-0 focus:border-transparent"
+          className="w-full h-full pr-10 outline-none focus:ring-0 focus:border-transparent placeholder:text-sm"
           {...props}
         />
         {Icon && <Icon

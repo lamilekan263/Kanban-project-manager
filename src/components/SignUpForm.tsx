@@ -9,8 +9,7 @@ import CustomFormField from './Shared/Form/CustomFormField'
 import Typography from './Typography'
 import { Separator } from './ui/separator'
 import { Form } from './ui/form'
-import { ArrowBigRight, ArrowRight, Eye, EyeOff } from 'lucide-react'
-import Link from 'next/link'
+import { Eye, EyeOff } from 'lucide-react'
 
 
 const formSchema = z.object({
@@ -21,11 +20,14 @@ const formSchema = z.object({
     }),
     password: z.string().min(7, {
         message: "Password must be at least 7 characters"
+    }),
+    confirmPassword: z.string().min(7, {
+        message: "Password must be at least 7 characters"
     })
 })
 
 
-const LoginForm = () => {
+const SignUpForm = () => {
 
     const form = useForm({
         resolver: zodResolver(formSchema),
@@ -61,6 +63,17 @@ const LoginForm = () => {
                         icon={passwordVisibility ? Eye : EyeOff}
                         iconProps={{
                             onClick: () => setPasswordVisibility((prev) => !prev),
+                            className: "text-primary", 
+                        }}
+                    />
+                    <CustomFormField
+                        name="confirmPassword"
+                        label='Password'
+                        placeholder='Enter Password'
+                        type={passwordVisibility ? 'text' : 'password'}
+                        icon={passwordVisibility ? Eye : EyeOff}
+                        iconProps={{
+                            onClick: () => setPasswordVisibility((prev) => !prev),
                             className: "text-primary", // Optional additional styling
                         }}
                     />
@@ -70,25 +83,14 @@ const LoginForm = () => {
                         <Typography variant='s' className='text-center'>OR</Typography>
                         <Separator className='flex-1' />
                     </div>
+
+                    <Button className='w-full' variant='outline' type="submit">
+                        Continue With Google
+                    </Button>
                 </form>
             </Form>
-            <Button className='w-full my-4' variant='outline' type="submit">
-                Continue With Google
-            </Button>
-            <Separator className='my-4' />
-            <div className='flex items-center'>
-                <Typography variant='s' className='font-thin'>
-                    Dont have an Account?
-                </Typography>
-                <Button asChild variant="link">
-                    <Link href="/" className="flex items-center gap-2">
-                        <span>Sign Up</span>
-                        <ArrowRight className="w-4 h-4" />
-                    </Link>
-                </Button>
-            </div>
         </div>
     )
 }
 
-export default LoginForm
+export default SignUpForm
