@@ -1,15 +1,19 @@
-
+import LoginForm from "@/components/LoginForm";
+import LogoComponent from "@/components/Logo";
 
 
 export default function Home() {
   return (
-
-    <div className='min-h-screen  flex justify-between'>
-      <div className="bg-primary flex-1">
-        Hello
+    <div className='h-screen overflow-hidden p-6 grid md:grid-cols-3'>
+      <div className="hidden md:block bg-primary  rounded-r-2xl">
+        <LogoComponent />
       </div>
-      <div className="flex-1">World</div>
+      <div className="col-span-2 ">
+        <LogoComponent />
+        <div className='flex h-full items-center justify-center w-full'>
+          <LoginForm />
+        </div>
+      </div>
     </div>
-
   );
 }

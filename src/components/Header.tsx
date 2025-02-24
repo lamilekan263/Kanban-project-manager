@@ -3,8 +3,6 @@ import React from 'react'
 import Typography from './Typography'
 import { Button } from './ui/button'
 import { EllipsisVertical, PlusIcon } from 'lucide-react'
-import Image from 'next/image'
-import Logo from '../../public/Logo.svg'
 import LogoComponent from './Logo'
 import { useSidebar } from './ui/sidebar'
 

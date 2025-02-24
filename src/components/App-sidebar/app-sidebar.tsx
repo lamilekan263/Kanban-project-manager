@@ -18,13 +18,11 @@ import {
 
 import Typography from "../Typography"
 import { ToggleSidebarTheme } from "./ToggleTheme"
-import Logo from "../../../public/Logo.svg"
-import Image from "next/image"
 import { Button } from "../ui/button"
 import Link from "next/link"
 import LogoComponent from "../Logo"
 
-// Menu items.
+
 const items = [
     {
         title: "Home",
@@ -51,7 +49,7 @@ export function AppSidebar() {
     return (
         <Sidebar>
             <SidebarHeader>
-                <LogoComponent/>
+                <LogoComponent />
             </SidebarHeader>
             <SidebarContent>
                 <SidebarGroup>
