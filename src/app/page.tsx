@@ -1,5 +1,6 @@
 import LoginForm from "@/components/LoginForm";
 import LogoComponent from "@/components/Logo";
+import SignUp from "@/components/SignUpForm";
 
 
 export default function Home() {
@@ -11,7 +12,7 @@ export default function Home() {
       <div className="col-span-2 ">
         <LogoComponent />
         <div className='flex h-full items-center justify-center w-full'>
-          <LoginForm />
+          <SignUp />
         </div>
       </div>
     </div>

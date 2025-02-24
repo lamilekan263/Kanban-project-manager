@@ -45,6 +45,7 @@ const LoginForm = () => {
 
     return (
         <div className='w-full md:w-[500px] ' >
+            <Typography variant='xl' className='mb-3'>Login</Typography>
             <Form {...form} >
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
                     <CustomFormField
@@ -82,7 +83,7 @@ const LoginForm = () => {
                     Dont have an Account?
                 </Typography>
                 <Button asChild variant="link">
-                    <Link href="/" className="flex items-center">
+                    <Link href="/signup" className="flex items-center">
                         <span>Sign Up</span>
                         <ArrowRight className="w-4 h-4" />
                     </Link>

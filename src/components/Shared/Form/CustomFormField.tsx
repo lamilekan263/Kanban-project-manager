@@ -19,10 +19,12 @@ const CustomFormField = ({ name, placeholder, label, icon, iconProps, type = "te
 
     const { control } = useFormContext()
     return (
-        <FormField control={control}
+        <FormField
+            
+            control={control}
             name={name}
             render={({ field, fieldState }) => (
-                <FormItem>
+                <FormItem className='w-full'>
                     <FormLabel>{label}</FormLabel>
                     <FormControl>
                         <Input

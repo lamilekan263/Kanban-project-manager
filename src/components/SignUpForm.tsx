@@ -9,10 +9,17 @@ import CustomFormField from './Shared/Form/CustomFormField'
 import Typography from './Typography'
 import { Separator } from './ui/separator'
 import { Form } from './ui/form'
-import { Eye, EyeOff } from 'lucide-react'
-
+import { ArrowRight, Eye, EyeOff } from 'lucide-react'
+import Link from 'next/link'
+import { FcGoogle } from "react-icons/fc";
 
 const formSchema = z.object({
+    firstName: z.string().min(2, {
+        message: "first Name must be at least 2 characters."
+    }),
+    lastName: z.string().min(2, {
+        message: "last Name must be at least 2 characters."
+    }),
     email: z.string().email({
         message: "Invalid email Address"
     }).min(2, {
@@ -20,18 +27,17 @@ const formSchema = z.object({
     }),
     password: z.string().min(7, {
         message: "Password must be at least 7 characters"
-    }),
-    confirmPassword: z.string().min(7, {
-        message: "Password must be at least 7 characters"
     })
 })
 
 
-const SignUpForm = () => {
+const SignUp = () => {
 
     const form = useForm({
         resolver: zodResolver(formSchema),
         defaultValues: {
+            firstName: '',
+            lastName: '',
             email: '',
             password: ''
         }
@@ -47,27 +53,29 @@ const SignUpForm = () => {
 
     return (
         <div className='w-full md:w-[500px] ' >
+            <Typography variant='xl' className='mb-3'>Sign Up</Typography>
             <Form {...form} >
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+                    <div className='flex gap-2'>
+                        <CustomFormField
+                            name="firstName"
+                            label='First Name'
+                            placeholder='Enter First Name'
+                        />
+                        <CustomFormField
+                            name="lastName"
+                            label='Last Name'
+                            placeholder='Enter Last Name'
+                        />
+                    </div>
                     <CustomFormField
                         name="email"
                         label='Email'
+                        type='email'
                         placeholder='Enter Email'
-
                     />
                     <CustomFormField
                         name="password"
-                        label='Password'
-                        placeholder='Enter Password'
-                        type={passwordVisibility ? 'text' : 'password'}
-                        icon={passwordVisibility ? Eye : EyeOff}
-                        iconProps={{
-                            onClick: () => setPasswordVisibility((prev) => !prev),
-                            className: "text-primary", 
-                        }}
-                    />
-                    <CustomFormField
-                        name="confirmPassword"
                         label='Password'
                         placeholder='Enter Password'
                         type={passwordVisibility ? 'text' : 'password'}
@@ -83,14 +91,26 @@ const SignUpForm = () => {
                         <Typography variant='s' className='text-center'>OR</Typography>
                         <Separator className='flex-1' />
                     </div>
-
-                    <Button className='w-full' variant='outline' type="submit">
-                        Continue With Google
-                    </Button>
                 </form>
             </Form>
+            <Button className='w-full my-4' variant='outline' type="submit">
+                <FcGoogle size={20} />
+                Continue With Google
+            </Button>
+            <Separator className='my-4' />
+            <div className='flex items-center'>
+                <Typography variant='s' className='font-thin'>
+                    Already have an Account?
+                </Typography>
+                <Button asChild variant="link">
+                    <Link href="/login" className="flex items-center">
+                        <span>Login</span>
+                        <ArrowRight className="w-4 h-4" />
+                    </Link>
+                </Button>
+            </div>
         </div>
     )
 }
 
-export default SignUpForm
+export default SignUp
