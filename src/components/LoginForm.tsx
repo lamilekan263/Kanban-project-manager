@@ -11,7 +11,7 @@ import { Separator } from './ui/separator'
 import { Form } from './ui/form'
 import { ArrowRight, Eye, EyeOff } from 'lucide-react'
 import Link from 'next/link'
-
+import { FcGoogle } from "react-icons/fc";
 
 const formSchema = z.object({
     email: z.string().email({
@@ -73,6 +73,7 @@ const LoginForm = () => {
                 </form>
             </Form>
             <Button className='w-full my-4' variant='outline' type="submit">
+                <FcGoogle size={20} />
                 Continue With Google
             </Button>
             <Separator className='my-4' />
