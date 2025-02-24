@@ -9,7 +9,7 @@ import CustomFormField from './Shared/Form/CustomFormField'
 import Typography from './Typography'
 import { Separator } from './ui/separator'
 import { Form } from './ui/form'
-import { ArrowBigRight, ArrowRight, Eye, EyeOff } from 'lucide-react'
+import { ArrowRight, Eye, EyeOff } from 'lucide-react'
 import Link from 'next/link'
 
 
@@ -81,7 +81,7 @@ const LoginForm = () => {
                     Dont have an Account?
                 </Typography>
                 <Button asChild variant="link">
-                    <Link href="/" className="flex items-center gap-2">
+                    <Link href="/" className="flex items-center">
                         <span>Sign Up</span>
                         <ArrowRight className="w-4 h-4" />
                     </Link>
